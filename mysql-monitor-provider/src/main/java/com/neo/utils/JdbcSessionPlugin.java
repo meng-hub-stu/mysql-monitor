@@ -90,7 +90,7 @@ public class JdbcSessionPlugin {
 
         List<DatabaseAddRes> listRes = new ArrayList<>();
         for (DataBaseDao dataBaseDao : list) {
-            String url = "jdbc:mysql://host:port/database?useUnicode=true&characterEncoding=utf-8&useSSL=true";
+            String url = "jdbc:mysql://host:port/database?serverTimezone=CTT&useUnicode=true&characterEncoding=utf-8&useSSL=true";
             String name = dataBaseDao.getName();
             url = url.replace("host", dataBaseDao.getIp());
             url = url.replace("port", dataBaseDao.getPort() + "");
